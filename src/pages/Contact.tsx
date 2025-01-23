@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layout';
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
 const BUDGET_RANGES = [
@@ -49,7 +49,9 @@ export const Contact = () => {
     message: string;
   }>({ type: null, message: '' });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value

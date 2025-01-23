@@ -1,11 +1,9 @@
 import { Layout } from '../../components/Layout';
-import { ArrowRight, Workflow, Settings, Clock, Target, BarChart, Zap } from 'lucide-react';
+import { ArrowRight, Settings, Clock, Target, BarChart, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const WorkflowOptimization = () => {
   const navigate = useNavigate();
-  const { elementRef, isVisible } = useScrollAnimation();
 
   const features = [
     {

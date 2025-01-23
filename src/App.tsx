@@ -1,26 +1,15 @@
-import React, { useState } from 'react';
-import { ArrowRight, Brain, Cpu, Database, Building2, ChevronDown, Play, BookOpen, Users, Mail, Phone, Menu, X, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Building2, ChevronRight, Brain, Cpu, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Layout } from './components/Layout';
 import backgroundPicture from './assets/backgroundpicture.jpg';
-import backgroundPicture2 from './assets/backgroundpicture2.jpg';
 import { useParallax } from './hooks/useParallax';
 import { TypewriterText } from './components/TypewriterText';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
-import { useNavigate } from 'react-router-dom';
-import { Layout } from './components/Layout';
 import picture1 from './assets/markets/picture1.jpg';
 import picture2 from './assets/markets/picture2.jpg';
 import picture3 from './assets/markets/picture3.jpg';
 import picture4 from './assets/markets/picture4.jpg';
-
-// First, let's define some consistent green colors we'll use:
-const theme = {
-  green: {
-    neon: '#39FF14', // Bright neon green
-    primary: '#10B981', // Emerald-500
-    light: '#D1FAE5', // Emerald-100
-    hover: '#059669', // Emerald-600
-  }
-};
 
 function App() {
   const scrollOffset = useParallax();
@@ -73,24 +62,6 @@ function App() {
       title: "Small and Medium Businesses (SMBs)",
       description: "Many SMBs are seeking automation to improve efficiency but may lack the resources to implement it themselves. Offering affordable, tailored AI solutions (e.g., customer service chatbots, automated marketing, inventory management, etc.) can be a huge value proposition.",
       image: picture4
-    }
-  ];
-
-  const blogs = [
-    {
-      title: "The Future of AI in Business",
-      date: "March 15, 2024",
-      preview: "Exploring how AI is reshaping business landscapes..."
-    },
-    {
-      title: "Automation Success Stories",
-      date: "March 10, 2024",
-      preview: "Real-world examples of successful automation..."
-    },
-    {
-      title: "AI Integration Guide",
-      date: "March 5, 2024",
-      preview: "Step-by-step guide to implementing AI..."
     }
   ];
 

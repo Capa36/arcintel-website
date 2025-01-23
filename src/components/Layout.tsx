@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Brain, ChevronDown, Mail, Phone, Menu, X } from 'lucide-react';
+import { ChevronDown, Mail, Phone, Menu, X } from 'lucide-react';
 import backgroundPicture2 from '../assets/backgroundpicture2.jpg';
 
 const navItemStyles = `
@@ -42,10 +42,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       { name: 'Blog', path: '/blog' }
     ],
     team: [{ name: 'AI Specialists', path: '/team/ai-specialists' }]
-  };
-
-  const toggleDropdown = (key: string) => {
-    setActiveDropdown(activeDropdown === key ? null : key);
   };
 
   const handleMouseLeave = () => {
@@ -103,7 +99,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                   <button
                     className={`${navItemStyles} flex items-center
                                ${activeDropdown === key ? 'text-[#8A2BE2] bg-[#8A2BE2]/10 shadow-[0_0_15px_rgba(138,43,226,0.5)]' : ''}`}
-                    onMouseEnter={() => setActiveDropdown(key)}
                   >
                     <span className="font-medium">
                       {key.charAt(0).toUpperCase() + key.slice(1)}

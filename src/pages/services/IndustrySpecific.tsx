@@ -1,11 +1,9 @@
 import { Layout } from '../../components/Layout';
-import { ArrowRight, Building2, Briefcase, BarChart, Shield, Cog, Zap, GraduationCap, Building, MessageSquare } from 'lucide-react';
+import { ArrowRight, GraduationCap, Building, MessageSquare, Shield, Zap, BarChart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const IndustrySpecific = () => {
   const navigate = useNavigate();
-  const { elementRef, isVisible } = useScrollAnimation();
 
   const features = [
     {
@@ -46,42 +44,6 @@ export const IndustrySpecific = () => {
       title: "Performance Boost",
       description: "Significant improvement in operational efficiency",
       stats: "45% increase"
-    }
-  ];
-
-  const industries = [
-    {
-      icon: <GraduationCap className="w-8 h-8" />,
-      title: "Education and Training",
-      description: "Educational institutions and training providers can use AI to automate administrative tasks, create personalized learning experiences, or even develop AI-driven tutoring systems. Offering tailored solutions to e-learning platforms or schools could have a significant impact.",
-      benefits: [
-        "Personalized learning experiences",
-        "Automated administrative tasks",
-        "AI-driven tutoring systems",
-        "Enhanced student engagement"
-      ]
-    },
-    {
-      icon: <Building className="w-8 h-8" />,
-      title: "Small and Medium Businesses (SMBs)",
-      description: "Many SMBs are seeking automation to improve efficiency but may lack the resources to implement it themselves. Offering affordable, tailored AI solutions (e.g., customer service chatbots, automated marketing, inventory management, etc.) can be a huge value proposition.",
-      benefits: [
-        "Affordable automation solutions",
-        "Streamlined operations",
-        "Enhanced productivity",
-        "Cost-effective scaling"
-      ]
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: "Customer Support Automation",
-      description: "Offering AI-driven customer service solutions, such as chatbots, virtual assistants, and ticketing systems, can help companies of all sizes provide 24/7 support, improve response times, and reduce operational costs.",
-      benefits: [
-        "24/7 customer support",
-        "Reduced response times",
-        "Lower operational costs",
-        "Improved customer satisfaction"
-      ]
     }
   ];
 

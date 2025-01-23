@@ -1,9 +1,8 @@
 import { Layout } from '../../components/Layout';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 export const BlogPost = () => {
-  const { slug } = useParams();
   const navigate = useNavigate();
 
   // This would typically come from your backend/database

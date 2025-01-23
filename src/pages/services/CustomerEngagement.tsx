@@ -1,11 +1,9 @@
 import { Layout } from '../../components/Layout';
-import { ArrowRight, Users, MessageSquare, BarChart, Brain, Zap, LineChart } from 'lucide-react';
+import { ArrowRight, MessageSquare, Users, BarChart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const CustomerEngagement = () => {
   const navigate = useNavigate();
-  const { elementRef, isVisible } = useScrollAnimation();
 
   const features = [
     {
@@ -15,7 +13,7 @@ export const CustomerEngagement = () => {
       hoverContent: "Our AI assistants handle customer inquiries round the clock, learning from each interaction to provide increasingly accurate and helpful responses."
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <BarChart className="w-8 h-8" />,
       title: "Smart Personalization",
       description: "Tailored customer experiences based on AI insights",
       hoverContent: "Leverage machine learning to understand customer preferences and behavior patterns, delivering personalized recommendations and interactions."
@@ -36,13 +34,13 @@ export const CustomerEngagement = () => {
       stats: "95% satisfaction rate"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <BarChart className="w-6 h-6" />,
       title: "Increased Efficiency",
       description: "Automate routine tasks while maintaining a personal touch",
       stats: "60% faster response time"
     },
     {
-      icon: <LineChart className="w-6 h-6" />,
+      icon: <BarChart className="w-6 h-6" />,
       title: "Data-Driven Growth",
       description: "Make informed decisions based on customer insights",
       stats: "40% increase in engagement"
