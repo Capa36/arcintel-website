@@ -7,7 +7,7 @@ export default defineConfig({
     root: '.',
     plugins: [react()],
     assetsInclude: ['**/*.jpeg', '**/*.jpg', '**/*.png', '**/*.svg'],
-    base: '/', // Adjust this for GitHub Pages if necessary
+    base: 'arcintel-website', // Adjust this for GitHub Pages if necessary
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
